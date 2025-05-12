@@ -11,34 +11,71 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Add Customer Page</title>
     </head>
-    <body>
-        <h1>Add Customer</h1>
-        <p>
-            Please add customer details below:
-        </p>
-        <form action="AddCustomerServlet.do" method="POST">
-            <table>
-                <tr>
-                    <td>Customer's Name:</td>
-                    <td><input type="text" name="name"/></td>
-                </tr>
-                <tr>
-                    <td>Product Name:</td>
-                    <td><input type="text" name="pName"/></td>
-                </tr>
-                <tr>
-                    <td>Quantity: </td>
-                    <td><input type="text" name="quantity"/></td>
-                </tr> 
-                <tr>
-                    <td>Unit Price:</td>
-                    <td><input type="text" name="unitPrice"/></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" value="ADD CUSTOMER"/></td>
-                </tr>
-            </table>
-        </form> 
+    <body style="font-family: 'Arial', sans-serif; background-color: #f3f4f6; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0;">
+        <div style="background-color: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); max-width: 450px; width: 100%;">
+            <h1 style="font-size: 1.75rem; color: #1f2937; text-align: center; margin-bottom: 1rem;">Add Customer</h1>
+            <p style="font-size: 1rem; color: #4b5563; text-align: center; margin-bottom: 1.5rem;">
+                Please add customer details below:
+            </p>
+            <form action="AddCustomerServlet.do" method="POST">
+                <table style="width: 100%; border-collapse: collapse;">
+                    <tr>
+                        <td style="padding: 0.75rem; font-size: 0.9rem; color: #374151; font-weight: 500;">Customer's Name:</td>
+                        <td style="padding: 0.75rem;">
+                            <input type="text" name="name" required 
+                                   style="width: 100%; padding: 0.75rem; font-size: 1rem; color: #1f2937; background-color: #f9fafb; border: 1px solid #d1d5db; border-radius: 8px; transition: all 0.3s ease;"
+                                   onfocus="this.style.borderColor='#10b981'; this.style.boxShadow='0 0 0 3px rgba(16, 185, 129, 0.2);'"
+                                   onblur="this.style.borderColor='#d1d5db'; this.style.boxShadow='none';"
+                                   onmouseover="this.style.borderColor='#9ca3af';"
+                                   onmouseout="this.style.borderColor='#d1d5db';">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; font-size: 0.9rem; color: #374151; font-weight: 500;">Product Name:</td>
+                        <td style="padding: 0.75rem;">
+                            <input type="text" name="pName" required 
+                                   style="width: 100%; padding: 0.75rem; font-size: 1rem; color: #1f2937; background-color: #f9fafb; border: 1px solid #d1d5db; border-radius: 8px; transition: all 0.3s ease;"
+                                   onfocus="this.style.borderColor='#10b981'; this.style.boxShadow='0 0 0 3px rgba(16, 185, 129, 0.2);'"
+                                   onblur="this.style.borderColor='#d1d5db'; this.style.boxShadow='none';"
+                                   onmouseover="this.style.borderColor='#9ca3af';"
+                                   onmouseout="this.style.borderColor='#d1d5db';">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; font-size: 0.9rem; color: #374151; font-weight: 500;">Quantity:</td>
+                        <td style="padding: 0.75rem;">
+                            <input type="number" name="quantity" min="1" required 
+                                   style="width: 100%; padding: 0.75rem; font-size: 1rem; color: #1f2937; background-color: #f9fafb; border: 1px solid #d1d5db; border-radius: 8px; transition: all 0.3s ease;"
+                                   onfocus="this.style.borderColor='#10b981'; this.style.boxShadow='0 0 0 3px rgba(16, 185, 129, 0.2);'"
+                                   onblur="this.style.borderColor='#d1d5db'; this.style.boxShadow='none';"
+                                   onmouseover="this.style.borderColor='#9ca3af';"
+                                   onmouseout="this.style.borderColor='#d1d5db';">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; font-size: 0.9rem; color: #374151; font-weight: 500;">Unit Price:</td>
+                        <td style="padding: 0.75rem;">
+                            <input type="number" name="unitPrice" step="0.01" min="0" required 
+                                   style="width: 100%; padding: 0.75rem; font-size: 1rem; color: #1f2937; background-color: #f9fafb; border: 1px solid #d1d5db; border-radius: 8px; transition: all 0.3s ease;"
+                                   onfocus="this.style.borderColor='#10b981'; this.style.boxShadow='0 0 0 3px rgba(16, 185, 129, 0.2);'"
+                                   onblur="this.style.borderColor='#d1d5db'; this.style.boxShadow='none';"
+                                   onmouseover="this.style.borderColor='#9ca3af';"
+                                   onmouseout="this.style.borderColor='#d1d5db';">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem;"></td>
+                        <td style="padding: 0.75rem;">
+                            <input type="submit" value="ADD CUSTOMER" 
+                                   style="width: 100%; padding: 0.75rem; font-size: 1rem; font-weight: 600; color: #ffffff; background-color: #10b981; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s ease, transform 0.2s ease;"
+                                   onmouseover="this.style.backgroundColor='#059669'; this.style.transform='translateY(-2px);'"
+                                   onmouseout="this.style.backgroundColor='#10b981'; this.style.transform='translateY(0);'"
+                                   onfocus="this.style.boxShadow='0 0 0 3px rgba(16, 185, 129, 0.3);'"
+                                   onblur="this.style.boxShadow='none';">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
     </body>
 </html>
